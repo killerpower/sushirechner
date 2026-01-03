@@ -1,0 +1,122 @@
+/* Khung bao quanh menu */
+.menu-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Đặt bên trái để không đè lên nút "Lên đầu trang" bên phải */
+    z-index: 2000;
+}
+
+/* Nút bấm chính */
+.nut-menu-chinh {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Danh sách các link (mặc định là ẩn đi) */
+.danh-sach-ngay {
+    display: none; /* Ẩn danh sách */
+    position: absolute;
+    bottom: 50px; /* Hiện lên phía trên nút bấm */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Các thẻ link bên trong danh sách */
+.danh-sach-ngay a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Mỗi link nằm 1 dòng */
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.danh-sach-ngay a:last-child { border-bottom: none; }
+.danh-sach-ngay a:hover { background-color: #fbb94b; color: white; }
+
+/* HIỆU ỨNG QUAN TRỌNG: Khi click/chạm vào container thì hiện danh sách */
+.menu-container:hover .danh-sach-ngay, 
+.menu-container:focus-within .danh-sach-ngay {
+    display: block;
+}
+
+.menu-dieu-huong-phai {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Đặt bên phải màn hình */
+    z-index: 2000;
+}
+
+/* Nút bấm chính bên phải */
+.nut-menu-phai {
+    background-color: #fbb94b; /* Màu vàng cam của bạn */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Danh sách nội dung (ẩn đi, hiện khi chạm) */
+.danh-sach-noi-dung {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 0; /* Canh lề phải để danh sách bung ra từ bên phải */
+    background-color: white;
+    min-width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Các thẻ link bên trong */
+.danh-sach-noi-dung a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    text-align: right; /* Chữ căn lề phải cho đẹp */
+}
+
+.danh-sach-noi-dung a:last-child { border-bottom: none; }
+.danh-sach-noi-dung a:hover { background-color: #f5f5f5; color: #fbb94b; }
+
+/* Hiệu ứng hiện danh sách khi chạm/hover */
+.menu-dieu-huong-phai:hover .danh-sach-noi-dung, 
+.menu-dieu-huong-phai:focus-within .danh-sach-noi-dung {
+    display: block;
+}
+
+#badlang {
+color: red;
+font-family: tahoma;
+}
+
+#ebeleben {
+color: red;
+}
+
+#rollen {
+color: red;
+}
+
+.bang-sushi {
+font-family: tahoma;
+}
